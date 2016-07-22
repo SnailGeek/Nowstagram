@@ -49,6 +49,8 @@ def init_database():
     print 10, user.images
     image = Image.query.get(1)
     print 11, image, image.user
+    print 12, Image.query.order_by('id desc').limit(10).all()
+
 
 
 if __name__ == '__main__':

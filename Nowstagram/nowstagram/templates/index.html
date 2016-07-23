@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}首页{% endblock %}
+{% block title %}首页-{{current_user.username}}{% endblock %}
 {% block css %}/static/styles/pages/index.css{% endblock %}
 {% block content %}
 <div class="page-main clearfix">
@@ -61,8 +61,6 @@
                     </span>
                 </li>
                 {% endfor %}
-
-
             </ul>
             <section class="discuss-edit">
                 <a class="icon-heart"></a>
@@ -74,5 +72,9 @@
         </div>
     </article>
     {% endfor %}
+    <div class="more-content js-load-more">
+        <a class="_oidfu" href="javascript:void(0);">更多</a>
+    </div>
 </div>
 {% endblock %}
+
